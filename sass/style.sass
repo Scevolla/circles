@@ -1,0 +1,977 @@
+@import 'bourbon'
+@import 'fonts'
+
+.ul-reset
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+img
+	vertical-align: middle
+
+body
+	min-width: 360px
+	font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+	font-size: 13px
+	line-height: 20px
+	color: #45484a
+	background: #fff
+	overflow-x: hidden
+
+.header-topline
+	padding-top: 17px
+	padding-bottom: 18px
+	border-bottom: 1px solid #fff
+	background: #fff url(../img/bg-header-topline.png)
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75)
+
+.logo
+	display: inline-block
+	vertical-align: middle
+	.logo-text-block
+		display: inline-block
+		vertical-align: middle
+		padding-left: 12px
+	.logo-title,
+	.logo-descr
+		margin: 0
+		font-weight: normal
+		text-transform: uppercase
+	.logo-title
+		padding-bottom: 5px
+		font-family: 'Intro', Courier		
+		font-size: 22px
+		line-height: 17px
+		letter-spacing: 0.2em
+		color: #45484a
+	.logo-descr
+		font-size: 10px
+		line-height: 8px
+		color: #7f7f7f
+
+.social-btns
+	li
+		float: left
+	a
+		position: relative
+		display: block
+		width: 35px
+		height: 35px
+		border-radius: 100%
+		background-repeat: no-repeat
+		background-position: 50% 50%
+	a:hover
+		background-color: #3d76ac
+		box-shadow: inset 0 0 6px 0 rgba(0, 0, 0, 0.25)
+	.btn-fb-like
+		background-image: url(../img/icon-fb-like.png)
+	.btn-fb-like:hover
+		background-image: url(../img/icon-fb-like-hover.png)
+	.btn-twitter
+		background-image: url(../img/icon-twitter.png)
+	.btn-twitter:hover
+		background-image: url(../img/icon-twitter-hover.png)
+	.btn-skype
+		background-image: url(../img/icon-skype.png)
+	.btn-skype:hover
+		background-image: url(../img/icon-skype-hover.png)
+	.btn-dribble
+		background-image: url(../img/icon-dribble.png)
+	.btn-dribble:hover
+		background-image: url(../img/icon-dribble-hover.png)
+	.btn-youtube
+		background-image: url(../img/icon-youtube.png)
+	.btn-youtube:hover
+		background-image: url(../img/icon-youtube-hover.png)
+
+.header-topline .social-btns
+	float: right
+	padding-top: 10px
+	padding-right: 40px
+
+.header-nav
+	background-color: #eceeef
+	box-shadow: inset 0 -1px 0 0 #abb1b6
+
+.header-menu
+	li
+		float: left
+		margin-right: 25px
+	a
+		display: block
+		padding: 11px 20px 9px
+		font-size: 12px
+		line-height: 24px
+		text-transform: uppercase
+		text-decoration: none
+		color: #4a4d4f
+		border-bottom: 1px solid transparent
+		&:hover,
+		&.active
+			color: #0f9de0
+			border-bottom-color: #0f9de0
+
+.sect-header-slider
+	position: relative	
+	.header-slide
+		height: 403px
+		width: 100%
+		background-repeat: no-repeat
+		background-position: center top
+		background-size: cover
+	.header-slide-1
+		background-image: url(../img/bg-header-slider-1.jpg)
+	.header-slide-2
+		background-image: url(../img/bg-header-slider-2.jpg)
+	.header-slide-3
+		background-image: url(../img/bg-header-slider-3.jpg)
+	.header-slider-overlay
+		box-sizing: border-box
+		position: absolute
+		z-index: 1
+		top: 25px
+		left: 0
+		right: 0
+		margin: 0 auto
+		width: 360px
+		height: 360px
+		padding: 0 30px
+		text-align: center
+		border-radius: 100%
+		background-color: transparentize(#001224, 0.85)
+		&::after
+			content: ''
+			position: absolute
+			top: 220px
+			left: 0
+			right: 0
+			margin: 0 auto
+			width: 288px
+			height: 1px
+			background-color: #dadcdf
+			background-color: transparentize(#f3f3f3, 0.5)
+	.header-slider-overlay-title
+		margin-top: 63px
+		margin-bottom: 13px
+		font-weight: 800
+		font-size: 48px
+		line-height: 39px
+		text-transform: uppercase
+		color: #e1e4e6
+		text-shadow: 0 0 3px rgba(0, 0, 0, 0.2)
+		span
+			font-weight: 300
+			font-size: 42px
+	.header-slider-overlay-descr
+		font-size: 14px
+		line-height: 18px
+		color: #f8f8f8
+	.header-slider-controls
+		position: absolute
+		bottom: 60px
+		left: 0
+		right: 0
+		margin: 0 auto
+		width: 100px
+	.header-slider-prev,
+	.header-slider-next
+		box-sizing: border-box
+		float: left
+		width: 50px
+		height: 50px
+		padding: 4px
+		border: 1px solid rgba(0, 0, 0, 0.3)
+		border-radius: 100%
+		background-color: transparentize(#effaff, 0.75)
+		cursor: pointer
+		&.disabled
+			cursor: default
+			transform: none !important
+			&::after
+				background-color: #45484a			
+	.header-slider-prev::after,
+	.header-slider-next::after
+		content: ''
+		display: block
+		width: 100%
+		height: 100%
+		background-color: #316fab
+		border-radius: 100%
+		background-repeat: no-repeat
+		background-position: 50% 50%
+	.header-slider-prev::after
+		background-image: url(../img/icon-white-arrow-left.png)
+	.header-slider-next::after
+		background-image: url(../img/icon-white-arrow-right.png)
+	.header-slider-prev:hover,
+	.header-slider-next:hover
+		transform: scale(1.05)
+	.header-slider-prev:active,
+	.header-slider-next:active
+		transform: scale(1)
+
+.sect-description
+	padding-top: 22px
+	padding-bottom: 27px
+	border-bottom: 1px solid #2a6294
+	color: #e7ebee
+	background: #3170ac url(../img/bg-blue-overlay.png) no-repeat center bottom
+	background-size: auto 100%
+	.description-content
+		position: relative
+		padding-right: 150px
+	.description-title
+		margin-top: 0
+		margin-bottom: 2px
+		font-weight: 300
+		font-size: 28px
+		line-height: 28px
+	.description-descr
+		font-size: 18px
+		line-height: 24px
+	.description-learn-more
+		box-sizing: border-box
+		display: block
+		position: absolute
+		top: 0
+		bottom: 0
+		margin: auto 0
+		right: 60px
+		width: 90px
+		height: 89px
+		padding: 30px 10px 0
+		text-align: center
+		font-size: 13px
+		line-height: 14px
+		text-transform: uppercase
+		text-decoration: none
+		text-shadow: 1px 1px 0 transparentize(#f3f3f3, 0.25)
+		color: #474a4c
+		background: url(../img/icon-learn-more.png) no-repeat center center
+		&:hover
+			transform: scale(1.05)
+
+.sect-features	
+	background: #a6abae
+	.feature
+		padding-top: 29px
+		padding-bottom: 20px
+		text-align: center
+		border-right: 1px solid #717476
+		border-left: 1px solid #b9bec0
+		&:first-child
+			border-left: none
+		&:last-child
+			border-right: none
+		&::after
+			content: ''
+			position: absolute
+			z-index: 1
+			right: -8px
+			top: 50%
+			margin-top: -7px
+			width: 8px
+			height: 14px
+			background: url(../img/icon-feature-arrow.png)
+		&::before
+			content: none
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			height: 3px			
+			background: #3799d8
+			background: linear-gradient(to top, #42acdb, #1f5a8b)
+		&:first-child::before
+			left: auto
+			width: 1000px
+		&:last-child::before
+			right: auto
+			width: 1000px
+		&:last-child::after
+			content: none
+		&:hover
+			&::before
+				content: ''
+			.feature-text	
+				color: #f3f3f3	
+				text-shadow: 1px 1px 0 transparentize(#404345, 0.5)
+			.feature-icon-1
+				background-image: url(../img/icon-feature-hover-1.png)
+			.feature-icon-2
+				background-image: url(../img/icon-feature-hover-2.png)
+			.feature-icon-3
+				background-image: url(../img/icon-feature-hover-3.png)
+	.feature-icon
+		height: 65px
+		width: auto
+		margin-bottom: 21px
+		background-repeat: no-repeat
+		background-position: center center
+	.feature-icon-1
+		background-image: url(../img/icon-feature-1.png)
+	.feature-icon-2
+		background-image: url(../img/icon-feature-2.png)
+	.feature-icon-3
+		background-image: url(../img/icon-feature-3.png)
+	.feature-text
+		color: #4e5256
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2)
+	.feature-title
+		margin: 0
+		padding-bottom: 5px
+		font-weight: 300
+		font-size: 24px
+	.feature-descr
+		display: block
+		font-size: 12px
+		text-transform: uppercase
+
+.img-thumb
+	margin-bottom: 3px
+	padding: 3px
+	border: 1px solid #b7b7b8
+	border-radius: 2px
+	box-shadow: 0 3px 0 0 #cbcbcc
+	&:hover
+		border-bottom-color: #2068b9
+	.img-thumb-content
+		position: relative
+		width: 100%
+		height: 100%
+	.img-thumb-img
+		display: block
+		width: 100%
+		height: auto
+.img-thumb-btn
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	width: 41px
+	height: 41px
+	padding: 4px
+	background: transparentize(#effaff, 0.75)
+	box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.5)
+	border-radius: 100%
+	&::before 		
+		content: ''
+		display: block
+		width: 100%
+		height: 100%
+		background-color: #f0f0f0
+		background-repeat: no-repeat
+		background-position: center center
+		border-radius: 100%
+	&:first-child
+		margin-right: 10px
+	&:hover
+		&::before
+			background-color: #bcbcbc
+
+.sect-portfolio
+	padding-top: 40px
+	padding-bottom: 40px
+	background: #f3f3f3
+	border-bottom: 1px solid #fff	
+	.portfolio-title
+		margin-top: 4px
+		margin-bottom: 17px
+		font-weight: bold
+		font-size: 16px
+		line-height: 26px	
+		text-transform: uppercase
+	.img-thumb:hover
+		.img-thumb-overlay
+			height: 100%
+		.img-thumb-btn-wrapper
+			z-index: 1
+			opacity: 1
+	.img-thumb-overlay
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		height: 74px
+		text-align: center
+		background-color: rgba(0, 0, 0, 0.45)
+		transition: height 0.3s
+	.img-thumb-title-wrapper
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		padding-bottom: 13px
+	.img-thumb-title
+		margin: 0
+		margin-bottom: 3px
+		font-weight: 300
+		font-size: 18px
+		color: #f3f3f3
+	.img-thumb-type
+		margin: 0
+		font-weight: 400
+		font-size: 11px
+		text-transform: uppercase
+		color: #a6abaf
+	.img-thumb-btn-wrapper
+		display: block
+		position: absolute
+		z-index: -1
+		bottom: 45%
+		left: 0
+		right: 0
+		font-size: 0
+		opacity: 0
+		transition: opacity 0.4s ease 0.2s
+	.img-thumb-link-btn::before
+		background-image: url(../img/icon-link.png)
+	.img-thumb-loupe-btn::before
+		background-image: url(../img/icon-loupe.png)
+
+.control-btn
+	display: block
+	float: left
+	width: 8px
+	height: 12px
+	cursor: pointer
+.control-btn-next
+	-webkit-mask:  url(../img/icon-arrow-right.svg) no-repeat 50% 50%
+	mask: url(../img/icon-arrow-right.svg) no-repeat 50% 50%
+	-webkit-mask-size: cover
+	mask-size: cover
+.control-btn-prev
+	margin-right: 12px
+	-webkit-mask:  url(../img/icon-arrow-left.svg) no-repeat 50% 50%
+	mask: url(../img/icon-arrow-left.svg) no-repeat 50% 50%
+	-webkit-mask-size: cover
+	mask-size: cover
+
+.sect-portfolio
+	.control-btn
+		background-color: #3170ac
+		margin-bottom: 25px
+	.disabled
+		cursor: default
+		background-color: #a6a6a6
+
+.sect-properties
+	padding-top: 39px
+	padding-bottom: 30px
+	background: #ebebeb url(../img/bg-header-topline.png)
+	border-bottom: 1px solid #fff
+	.property
+		position: relative
+		padding-left: 88px
+		&:hover
+			.property-img::before
+				background: linear-gradient(to top, #4b87bb, #215695)
+			.property-title
+				color: #3170ac
+	.property-img
+		position: absolute
+		top: 0
+		left: 0
+		width: 59px
+		height: 59px
+		padding: 4px
+		border: 1px solid #b1b3b4
+		background-color: #cfd2d4
+		box-shadow: 0 1px 2px 0 #bbbbbc
+		border-radius: 100%
+		&::before
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			background: #5f6264
+			background: linear-gradient(to top, #5f6264, #313334)
+			border-radius: 100%
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%			
+	.property-img-1::after
+		background: url(../img/icon-property-1.png) no-repeat 50% 50%
+	.property-img-2::after
+		background: url(../img/icon-property-2.png) no-repeat 50% 50%
+	.property-img-3::after
+		background: url(../img/icon-property-3.png) no-repeat 50% 50%
+	.property-title
+		margin-top: -5px
+		margin-bottom: 4px
+		font-weight: 800
+		font-size: 12px
+		line-height: 26px
+		text-transform: uppercase
+	.property-list li
+		position: relative
+		padding-left: 12px
+		font-size: 12px
+		line-height: 18px
+		margin-bottom: 8px
+		&::before
+			content: ''
+			position: absolute
+			left: 2px
+			top: 7px
+			width: 3px
+			height: 5px
+			background: url(../img/icon-property-arrow.png) no-repeat
+
+.section-title
+	position: relative
+	margin-top: 0
+	margin-bottom: 37px
+	padding-bottom: 15px
+	font-weight: 300
+	font-size: 24px
+	line-height: 26px
+	text-transform: uppercase
+	text-align: center
+	border-bottom: 3px solid #dadada
+	box-shadow: 0 1px 0 0 #fff
+	&::after
+		content: ''
+		box-sizing: border-box
+		position: absolute
+		bottom: -15px
+		left: 50%
+		margin-left: -6px
+		width: 12px
+		height: 12px
+		border: 6px solid transparent
+		border-top-color: #dadada		
+
+.avatar
+	display: block
+	padding: 3px
+	border: 1px solid #cdcdce
+	border-radius: 100%
+	.avatar-img
+		display: block
+		width: 100%
+		height: 100%
+		border-radius: 100%
+
+.sect-posts
+	padding-top: 35px
+	padding-bottom: 35px
+	background-color: #f3f3f3
+	border-bottom: 1px solid #fff
+	.row
+		position: relative
+	.slider-controls
+		position: absolute
+		top: 8px
+		right: 10px
+	.control-btn
+		background-color: #3170ac
+	.disabled
+		cursor: default
+		background-color: #a6a6a6
+	.img-thumb:hover
+		.img-thumb-inner-overlay
+			opacity: 1			
+		.img-thumb-overlay
+			opacity: 1
+			top: 0
+	.img-thumb-inner-overlay
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background: rgba(0, 0, 0, 0.3)
+		opacity: 0
+		transition: opacity 0.3s
+	.img-thumb-overlay
+		position: absolute
+		top: -47px
+		left: 0
+		right: 0
+		height: 47px
+		background: rgba(0, 0, 0, 0.3)
+		text-align: center
+		opacity: 0
+		transition: all 0.2s
+	.img-thumb-date,
+	.img-thumb-tag
+		display: inline-block
+		margin-top: 14px
+		padding-left: 23px
+		font-size: 11px
+		color: #f3f3f3
+	.img-thumb-date
+		margin-right: 20px
+		background: url(../img/icon-time.png) no-repeat 0 1px
+	.img-thumb-tag
+		background: url(../img/icon-tag.png) no-repeat 0 1px
+	.img-thumb-btn-wrapper
+		display: block
+		position: absolute
+		bottom: 30px
+		left: 0
+		right: 0
+		font-size: 0
+		text-align: center
+	.img-thumb-crest-btn::before
+		background-image: url(../img/icon-crest.png)
+	.post-preview
+		position: relative
+		margin-top: 5px
+		padding-top: 10px
+	.avatar
+		position: absolute
+		top: 0
+		left: 0
+		width: 58px
+		height: 58px
+	.avatar-post-count-link
+		display: block
+		position: absolute
+		z-index: 10
+		bottom: -7px
+		right: -3px
+		width: 30px
+		height: 28px
+		font-weight: 300
+		font-size: 10px
+		line-height: 28px
+		color: #f3f3f3
+		text-align: center
+		text-decoration: none
+		background: url(../img/icon-posts.png) no-repeat 0 0
+		&:hover
+			font-size: 12px
+	.post-text
+		display: block
+		padding-left: 80px
+		margin-bottom: 17px
+		font-weight: 300
+		font-size: 18px
+		line-height: 22px
+		color: #3170ac
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	.post-author
+		display: block
+		font-size: 11px
+		line-height: 22px
+		a
+			text-decoration: none
+			color: #3874ad
+		a:hover
+			text-decoration: underline
+
+.sect-choseus
+	padding-top: 35px
+	padding-bottom: 18px
+	background: #ebebeb url(../img/bg-header-topline.png)
+	.section-title
+		margin-bottom: 32px
+	.choseus-item
+		position: relative
+		margin-bottom: 34px
+	.choseus-item:hover
+		.choseus-item-title
+			color: #3170ac
+		.choseus-item-icon
+			background: #3487ba
+			background: linear-gradient(to top, #2e80b4, #3a8dc0)
+	.choseus-item-icon
+		position: absolute
+		top: 0
+		left: 0
+		width: 41px
+		height: 41px
+		border-radius: 100%
+		background: #484b4d
+		background: linear-gradient(to top, #424446, #4e5153)
+		box-shadow: inset 0 0 6px 0 rgba(0, 0, 0, 0.5)
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			margin: auto
+			background-repeat: no-repeat
+			background-position: 50% 50%
+	.chose-item-icon-1::before
+		width: 21px
+		height: 21px
+		background-image: url(../img/icon-choseus-1.png)
+	.chose-item-icon-2::before
+		width: 18px
+		height: 15px
+		background-image: url(../img/icon-choseus-2.png)
+	.chose-item-icon-3::before
+		width: 25px
+		height: 25px
+		background-image: url(../img/icon-choseus-3.png)
+	.chose-item-icon-4::before
+		width: 16px
+		height: 18px
+		background-image: url(../img/icon-choseus-4.png)
+	.chose-item-icon-5::before
+		width: 16px
+		height: 20px
+		background-image: url(../img/icon-choseus-5.png)
+	.chose-item-icon-6::before
+		width: 18px
+		height: 20px
+		background-image: url(../img/icon-choseus-6.png)
+	.chose-item-icon-7::before
+		width: 21px
+		height: 19px
+		background-image: url(../img/icon-choseus-7.png)
+	.chose-item-icon-8::before
+		width: 16px
+		height: 17px
+		background-image: url(../img/icon-choseus-8.png)
+	.choseus-item-title
+		margin-top: 0
+		margin-bottom: 20px
+		padding-top: 11px
+		padding-left: 50px
+		font-weight: 800
+		font-size: 14px
+		text-transform: uppercase
+	.choseus-item-descr
+		margin: 0
+
+.sect-peoplesay
+	padding-top: 36px
+	padding-bottom: 38px
+	background-color: #b4b8bb
+	.peoplesay-title
+		margin-top: 0
+		margin-bottom: 20px
+		font-weight: 300
+		font-size: 24px
+		line-height: 26px
+		text-transform: uppercase
+	.peoplesay-content
+		position: relative
+		padding-left: 103px
+		padding-right: 30px
+		p
+			margin-bottom: 23px
+	.avatar		
+		background-color: #c2c8cb
+		border-color: #a6a9ac
+	.peoplesay-content .avatar
+		position: absolute
+		top: 0
+		left: 0
+		width: 78px
+		height: 78px
+	.peoplesay-readmore
+		display: inline-block
+		padding: 6px 22px	
+		font-size: 10px
+		text-transform: uppercase
+		text-decoration: none
+		color: #45484a
+		border: 1px solid #f3f3f3
+		border-radius: 5px
+		background: #e2e3e5
+		background: linear-gradient(to top, #eaebeb, #d8dbdd)
+		box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2)
+		&:hover
+			box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2)
+		&:active
+			box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.2)
+			background: linear-gradient(to top, #d8dbdd, #eaebeb)
+	.peoplesay-slider
+		width: 100%
+	.peoplesay-slide
+		position: relative
+	.peoplesay-slide-text
+		box-sizing: border-box
+		float: right
+		width: 369px
+		min-height: 136px
+		margin-top: 2px
+		padding: 25px 30px 25px 55px
+		color: #ebebeb
+		background: url(../img/dialog.png) no-repeat 0 0
+	.avatar-block
+		position: absolute
+		top: 0
+		left: 0
+	.avatar-block-name
+		margin-top: 5px
+		font-weight: 800
+		font-size: 11px
+		line-height: 12px
+		text-transform: uppercase
+	.avatar-block-company
+		font-size: 10px
+		line-height: 12px
+		text-transform: uppercase
+	.peoplesay-slide .avatar
+		width: 58px
+		height: 58px
+	.slider-block
+		position: relative
+	.slider-controls
+		position: absolute
+		top: 6px
+		right: 10px
+	.control-btn
+		background-color: #ebebeb
+	.disabled
+		cursor: default
+		background-color: #909397
+
+.sect-twitter
+	border-top: 1px solid #2a6294
+	background: #3170ac url(../img/bg-blue-overlay.png) no-repeat center bottom
+	background-size: auto 100%
+	.twitter-content
+		box-sizing: border-box
+		position: relative
+		width: 100%
+		height: 100%
+		padding-top: 26px
+		padding-bottom: 25px
+		padding-left: 80px
+		padding-right: 140px
+		background: url(../img/icon-big-twitter.png) no-repeat left center
+	.twitter-slider
+		width: 100%
+	.twitter-slide
+		font-size: 16px
+		line-height: 18px
+		color: #bbdbef
+	.twitter-hashtag,
+	.twitter-author,
+	.twitter-time
+		font-style: italic
+	.twitter-text
+		color: #ebebeb
+	.twitter-time
+		font-size: 12px
+	.slider-controls
+		position: absolute
+		top: 50%
+		transform: translate(0, -50%)
+		right: 0
+	.control-btn
+		background-color: #ebebeb
+	.disabled
+		cursor: default
+		background-color: #349ada
+		background-color: transparentize(#349ada, 0.4)
+
+.footer
+	padding-top: 41px
+	padding-bottom: 35px
+	color: #b4b9bc
+	background: #46494b
+	.logo
+		.logo-title,
+		.logo-descr
+			color: #878a8e
+	.footer-title
+		margin-top: 0
+		margin-bottom: 18px
+		font-weight: 800
+		font-size: 14px
+		line-height: 14px
+		text-transform: uppercase
+		color: #b1b6b9
+	p
+		margin: 0
+	.footer-post
+		width: 90%
+		margin-top: 12px
+		padding-bottom: 15px
+		border-bottom: 1px solid #595c5e
+	.footer-post:last-child
+		padding-bottom: 0
+		border-bottom: none
+	.footer-post-topline
+		font-size: 10px
+		color: #909397
+		text-transform: uppercase
+	.footer-post-link
+		text-decoration: none
+		color: #bbdbef
+		&:hover
+			text-decoration: underline
+	.footer-address,
+	.footer-phone
+		margin-bottom: 21px
+	.footer-support-email
+		display: block
+		color: #b4b9bc
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	.footer-subscribe-text
+		font-size: 12px
+		line-height: 18px
+		margin-bottom: 15px
+	form
+		position: relative
+		margin-bottom: 40px
+	input[type="email"]
+		box-sizing: border-box
+		width: 100%
+		padding: 6px 73px 6px 10px
+		font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+		font-size: 16px
+		line-height: 20px
+		color: #b1b6b9
+		border: 1px solid #878a8e
+		border-radius: 6px
+		background-color: #414446
+		box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, 0.3), 1px 1px 0 0 rgba(255, 255, 255, 0.15)
+		outline: none
+	input[type="email"]:focus
+		border-color: #b1b6b9
+		box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.3)
+	input[type="email"]:hover
+		border-color: #b1b6b9
+	button
+		display: block
+		position: absolute
+		top: 2px
+		right: 2px
+		padding: 0 14px
+		font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+		font-size: 10px
+		line-height: 28px
+		text-transform: uppercase
+		color: #b1b6b9
+		background: #4b4f53
+		background: linear-gradient(to top, #56595b, #42484c)
+		border: 1px solid #56595b
+		border-radius: 5px
+		box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2)
+		cursor: pointer
+		outline: none
+	button:hover,
+	button:focus
+		color: #cdcdcd
+		border-color: #333
+	button:active
+		background: linear-gradient(to top, #42484c, #56595b)
+	.footer-title-social
+		margin-bottom: 10px
+
+.copyright-block
+	padding: 16px 0
+	font-size: 12px
+	line-height: 20px
+	color: #7b7b7b
+	background-color: #3d3f40
+
+@import 'media'
